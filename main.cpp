@@ -14,7 +14,7 @@ int main()
 
 void makeChoinka()
 {
-    Polygon kwadrat(25);
+    Polygon choinka(25);
     Point a(270, 600);
     Point b(270, 550);
     Point c(150, 550);
@@ -31,21 +31,20 @@ void makeChoinka()
     Point n(330,550);
     Point o(330,600);
 
-
-    kwadrat.push(a);
-    kwadrat.push(b);
-    kwadrat.push(c);
-    kwadrat.push(d);
-    kwadrat.push(e);
-    kwadrat.push(f);
-    kwadrat.push(g);
-    kwadrat.push(h);
-    kwadrat.push(i);
-    kwadrat.push(j);
-    kwadrat.push(k);
-    kwadrat.push(l);
-    kwadrat.push(m);
-    kwadrat.push(n);
-    kwadrat.push(o);
-    kwadrat.makeSVGFile("choinka.svg");
+    choinka.push(a);
+    choinka.push(b);
+    choinka.push(c);
+    choinka.push(d);
+    choinka.push(e);
+    choinka.push(f);
+    choinka.push(g);
+    choinka.push(h);
+    choinka.push(i);
+    choinka.push(j);
+    choinka.push(k);
+    choinka.push(l);
+    choinka.push(m);
+    choinka.push(n);
+    choinka.push(o);
+    choinka.makeSVGFile("choinka.svg");
 }

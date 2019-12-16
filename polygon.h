@@ -12,11 +12,8 @@ class Polygon
 public:
     Polygon(unsigned int);
     ~Polygon();
-
     void push(Point);
     void makeSVGFile(std::string);
-
-
     unsigned int numberOfPoints() const;
 
 private:

@@ -1,0 +1,75 @@
+﻿Student: JAKUB SZYMAŃSKI (E102) 300387
+			jakszyma@gmail.com
+prowadzący: dr hab. inż. Michał Borecki
+
+
+
+
+
+Programowania Obiektowe(PROE) – projekt nr1
+dokumentacja projektu
+
+Temat: Stworzenie obrazka w formacie SVG z wykorzystaniem paradygmatów programowania obiektowego.
+
+
+Opis Programu:
+
+I. Program zawiera 2 klasy:
+
+1. Point
+
+-klasa ta posiada:
+*dwie zmienne:
+	float _xCoord;
+	float _yCoord;
+które przechowują współrzedne danego punktu
+
+*konstruktory, które ustawiają współrzędne punktu,
+
+*metody:
+	float set_xCoord, float set_yCoord, które umozliwiają usatwienie współrzędnych punktu poza konstruktorami,
+	void return_xCoord, return_yCoord, umożliwiają wyciągnięcie informacji nt odpowiedniej współrzędnej
+
+
+2. Polygon
+-klasa dziedziczy po klasie punkt,
+-klasa ta posiada 
+*zmienne:
+	 unsigned int _maxSize;
+    unsigned int _number_of_points = 0;
+_maxSize – jest to maksymalny możliwy rozmiar naszego wielokąta, np wartość 20 oznacza,że możemy dodać maksymalnie 20 punktów,
+number_of_points – ta zmienna przetrzymuje informacje nt aktualnej ilości punktów dodanych,
+
+*konstruktor
+Polygon::Polygon(unsigned int _temp_maxSize)
+{
+    _maxSize = _temp_maxSize;
+    _number_of_points = 0;
+    points_ = new Point[_maxSize];
+}
+który, po ustaleniu wartości zmiennej _maxSize, inicjuje tablice punktów oraz ustawia wartość _number_of_points = 0;
+
+*destruktor – usuwa stworzoną tablice i wypisuje na ekran komunikat,
+
+*metody
+ 	push – metoda ta dodaje punkty do utworzonej wcześniej tablicy oraz zwiększa wartość zmiennej _number_of_points,
+	NumberOfPoints – zwraca ilość punktów dodanych do wielokąta
+	makeSVGFile – tworzy plik i zapisuje do niego punktu wielokąta oraz zgodnie z formatem svg odpowiednio je łączy.
+
+II. Plik main.cpp	
+
+- zawiera funkcje makeChoinka(), która tworzy obiekt choinka, punkty a, b, … , o. Potem punkty są dodawane do choinki i zostaje utworzony plik svg.
+
+III. Plik SVG
+
+TEKST:
+<svg xmlns ="http://www.w3.org/2000/svg"
+ viewBox="0 0 600 600">
+<polyline stroke-width="6"
+stroke="#15096e" fill="none"
+ points="270,600 270,550 150,550 270,500 180,500 270,450 200,450 300,350 400,450 330,450 430,500 330,500 450,550 330,550 330,600 270,600">
+</polyline>
+</svg>
+
+OBRAZEK:
+

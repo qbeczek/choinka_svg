@@ -17,6 +17,7 @@ void Polygon::push(Point point)
 {
     if(_number_of_points < _maxSize)
         points_[_number_of_points++] = point;
+    else std::cout << "wystapil blad przy dodawniu punktu, sprawdz pamiec" << std::endl;
 }
 
 unsigned int Polygon::numberOfPoints() const
